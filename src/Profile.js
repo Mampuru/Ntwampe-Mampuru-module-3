@@ -1,23 +1,45 @@
 import React, { Component } from 'react';
-import { Pressable, Dimensions, Text, StyleSheet, SafeAreaView, TextInput, TouchableOpacity, Button } from 'react-native';
+import { Pressable, Dimensions, Text, StyleSheet, SafeAreaView, TextInput, TouchableOpacity,Button } from 'react-native';
 
-const Picture = ({ navigation }) => {
+const Profile = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.screenContainer}>
-            <Text style={styles.baseText}>
-                Picture View
-            </Text>
-
-            <Pressable
+        <Text style={styles.baseText}>
+            Profile
+        </Text>
+        <TextInput
+                style={styles.input}
+                placeholder="Lebo"
+            />
+            <TextInput
+                style={styles.input}
+                placeholder="Lebo@gmail.com"
+            />
+            <TextInput
+                style={styles.input}
+                placeholder="********"
+            />
+            <TextInput
+                style={styles.input}
+                placeholder="********"
+            />
+        <Pressable
                 style={styles.buttonStyle}
                 onPress={() => navigation.navigate('#')}>
-                <Text style={styles.buttonTextStyle}>Take Picture</Text>
+                <Text style={styles.buttonTextStyle}>Save</Text>
             </Pressable>
-        </SafeAreaView>
+    </SafeAreaView>
     );
-};
+  };
 
 const styles = StyleSheet.create({
+    input: {
+        height: 40,
+        width: '80%',
+        margin: 12,
+        borderWidth: 1,
+        padding: 10,
+    },
     baseText: {
         fontSize: 50,
         fontWeight: "bold",
@@ -52,4 +74,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default Picture; 
+export default Profile; 

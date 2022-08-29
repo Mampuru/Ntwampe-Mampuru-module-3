@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { View,Pressable, Dimensions, Text, StyleSheet, SafeAreaView, TextInput, TouchableOpacity, Button } from 'react-native';
 
-const Login = ({ navigation }) => {
+const SignUp = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.screenContainer}>
             <Text style={styles.baseText}>
-                Login
+                SignUp
             </Text>
             <TextInput
                 style={styles.input}
@@ -13,18 +13,26 @@ const Login = ({ navigation }) => {
             />
             <TextInput
                 style={styles.input}
+                placeholder="Email"
+            />
+            <TextInput
+                style={styles.input}
                 placeholder="Password"
+            />
+            <TextInput
+                style={styles.input}
+                placeholder="Confirm Password"
             />
             <Pressable
                 style={styles.buttonStyle}
                 onPress={() => navigation.navigate('Dashboard')}>
-                <Text style={styles.buttonTextStyle}>Login</Text>
+                <Text style={styles.buttonTextStyle}>Sign Up</Text>
             </Pressable>
 
             <Pressable
                 style={styles.buttonStyle}
-                onPress={() => navigation.navigate('SignUp')}>
-                <Text style={styles.buttonTextStyle}>Sign Up</Text>
+                onPress={() => navigation.navigate('Login')}>
+                <Text style={styles.buttonTextStyle}>Login</Text>
             </Pressable>
         </SafeAreaView>
 
@@ -73,4 +81,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default Login; 
+export default SignUp; 
