@@ -13,10 +13,26 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
-        <Stack.Screen name="Dashboard" component={Dashboard} />
-        <Stack.Screen name="Picture" component={Picture} />
-        <Stack.Screen name="Profile" component={Profile} />
-        <Stack.Screen name="SignUp" component={SignUp} />
+        <Stack.Screen name="Dashboard" component={Dashboard} options={{
+          headerStyle: {
+            backgroundColor: '#ff8c1a',
+          }
+        }} />
+        <Stack.Screen name="Picture" component={Picture} options={{
+          headerStyle: {
+            backgroundColor: '#ff8c1a',
+          }
+        }} />
+        <Stack.Screen name="Profile" component={Profile} options={{
+          headerStyle: {
+            backgroundColor: '#ff8c1a',
+          }
+        }} />
+        <Stack.Screen name="SignUp" component={SignUp} options={{
+          headerStyle: {
+            backgroundColor: '#ff8c1a',
+          }
+        }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
