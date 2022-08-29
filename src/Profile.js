@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Pressable, Dimensions, Text, StyleSheet, SafeAreaView, TextInput, TouchableOpacity,Button } from 'react-native';
+import { Pressable, Dimensions, Text, StyleSheet, SafeAreaView, TextInput,View,Image } from 'react-native';
 
 const Profile = ({ navigation }) => {
     return (
@@ -7,6 +7,9 @@ const Profile = ({ navigation }) => {
         <Text style={styles.baseText}>
             Profile
         </Text>
+        <View>
+            <Image source={require("../assets/user.png")} style={{ width: 100, height: 100 }}/>
+        </View>
         <TextInput
                 style={styles.input}
                 placeholder="Lebo"
