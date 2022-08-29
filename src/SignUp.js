@@ -30,9 +30,9 @@ const SignUp = ({ navigation }) => {
             </Pressable>
 
             <Pressable
-                style={styles.buttonStyle}
+                style={styles.outlinebuttonStyle}
                 onPress={() => navigation.navigate('Login')}>
-                <Text style={styles.buttonTextStyle}>Login</Text>
+                <Text style={styles.outlinebuttonTextStyle}>Login</Text>
             </Pressable>
         </SafeAreaView>
 
@@ -58,6 +58,28 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#fff',
+    },
+    outlinebuttonStyle: {
+        height: 54,
+        width: '75%',
+        marginTop: 32,
+        borderRadius: 30,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#fff',
+        borderColor:'#ff8c1a', 
+        borderWidth: 2,
+        shadowRadius: 5,
+        shadowOpacity: 0.7,
+        shadowColor: 'rgba(46, 229, 157, 0.5)',
+        shadowOffset: {
+            width: 0,
+            height: 3,
+        },
+    },
+    outlinebuttonTextStyle: {
+        color: '#ff8c1a',
+        fontWeight: '700',
     },
     buttonStyle: {
         height: 54,
